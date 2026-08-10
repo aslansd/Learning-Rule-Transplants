@@ -140,30 +140,6 @@ Not every rule appears in every notebook, but the naming follows EIANN's source 
 https://colab.research.google.com/github/<user>/<repo>/blob/main/notebooks/<notebook>.ipynb
 ```
 
-**Locally.**
-
-```bash
-git clone https://github.com/<user>/<repo>.git
-cd <repo>
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-jupyter lab
-```
-
-`requirements.txt`:
-
-```
-torch
-numpy
-matplotlib
-sympy          # Items or Relations (symbolic prelude)
-pandas         # Geometry of Efficient Codes, GCML
-scipy          # Geometry of Efficient Codes
-scikit-learn   # Geometry of Efficient Codes, GCML
-networkx       # GCML (graph task)
-torchvision    # Local Redundancy (MNIST section only)
-```
-
 Tested on Python 3.10–3.11. CPU only — the tensors are small enough that a GPU doesn't help, and the EI architectures train one sample at a time with multi-step settling, so the bottleneck is Python, not FLOPs.
 
 The uploaded filenames are descriptive but long enough to be awkward in URLs and `git` output; short numbered names with the full title in the notebook's first cell (where it already is) reads better on GitHub. Keep executed outputs committed so the notebooks render with figures on GitHub without anyone running them.
