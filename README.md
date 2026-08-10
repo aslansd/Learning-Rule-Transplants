@@ -166,21 +166,6 @@ torchvision    # Local Redundancy (MNIST section only)
 
 Tested on Python 3.10–3.11. CPU only — the tensors are small enough that a GPU doesn't help, and the EI architectures train one sample at a time with multi-step settling, so the bottleneck is Python, not FLOPs.
 
-### Suggested repo layout
-
-```
-.
-├── README.md
-├── requirements.txt
-├── LICENSE
-└── notebooks/
-    ├── 01_pong_active_inference.ipynb
-    ├── 02_items_or_relations.ipynb
-    ├── 03_local_redundancy.ipynb
-    ├── 04_geometry_of_efficient_codes.ipynb
-    └── 05_gcml_cognitive_map.ipynb
-```
-
 The uploaded filenames are descriptive but long enough to be awkward in URLs and `git` output; short numbered names with the full title in the notebook's first cell (where it already is) reads better on GitHub. Keep executed outputs committed so the notebooks render with figures on GitHub without anyone running them.
 
 ---
